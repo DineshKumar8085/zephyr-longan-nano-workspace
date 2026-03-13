@@ -1,0 +1,13 @@
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            pinmux = <I2C0_SCL_PB6_NORMP>, <I2C0_SDA_PB7_NORMP>;
+        };
+    };
+};
+
+&i2c0 {
+    status = "okay";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-names = "default";
+};

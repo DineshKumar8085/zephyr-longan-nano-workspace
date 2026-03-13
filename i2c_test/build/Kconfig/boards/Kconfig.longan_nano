@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano/Kconfig.longan_nano"

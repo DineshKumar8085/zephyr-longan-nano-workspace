@@ -1,0 +1,48 @@
+# Available runners configured by board.cmake.
+runners:
+- openocd
+- dfu-util
+- jlink
+
+# Default flash runner if --runner is not given.
+flash-runner: openocd
+
+# Default debug runner if --runner is not given.
+debug-runner: openocd
+
+# Common runner configuration values.
+config:
+  board_dir: /home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano
+  # Build outputs:
+  elf_file: zephyr.elf
+  hex_file: zephyr.hex
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /home/dinesh/zephyr-sdk-0.17.4/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb
+  openocd: /home/dinesh/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+  openocd_search:
+    - /home/dinesh/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  openocd:
+    - --cmd-load
+    - flash write_image erase
+    - --cmd-verify
+    - verify_image
+    - --cmd-pre-init
+    - source [find target/gd32vf103.cfg]
+    - --cmd-pre-load=gd32vf103-pre-load
+    - --cmd-load=gd32vf103-load
+    - --cmd-post-verify=gd32vf103-post-verify
+  dfu-util:
+    - --pid=28e9:0189
+    - --alt=0
+    - --dfuse
+  jlink:
+    - --dt-flash=y
+    - --device=GD32VF103CBT6
+    - --speed=4000
+    - --iface=jtag
+    - --tool-opt=-jtagconf -1,-1 -autoconnect 1
+    - --reset-after-load
