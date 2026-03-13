@@ -1,0 +1,4 @@
+west:
+  command: /home/dinesh/Documents/zephyrproject/.venv/bin/west build -b qemu_x86 .
+  topdir: /home/dinesh/Documents/zephyrproject
+  version: 1.5.0
