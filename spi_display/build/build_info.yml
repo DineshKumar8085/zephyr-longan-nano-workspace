@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/dinesh/Documents/zephyrproject/my_apps/spi_display'
+    source-dir: '/home/dinesh/Documents/zephyrproject/my_apps/spi_display'
+  board:
+    name: 'longan_nano'
+    path:
+     - '/home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano'
+    qualifiers: 'gd32vf103'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano/longan_nano.dts'
+     - '/home/dinesh/Documents/zephyrproject/my_apps/spi_display/longan_nano.overlay'
+    include-dirs:
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/atmel/include'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/microchip/include'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/microchip/dts'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/nxp/dts'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/stm32/dts'
+     - '/home/dinesh/Documents/zephyrproject/modules/hal/ti/dts'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/include'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/include/zephyr'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/common'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/vendor'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/rx'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/x86'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/xtensa'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/sparc'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/riscv'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/posix'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/arm64'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/arm'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts/arc'
+     - '/home/dinesh/Documents/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/dinesh/Documents/zephyrproject/my_apps/spi_display/longan_nano.overlay'
+  kconfig:
+    files:
+     - '/home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano/longan_nano_defconfig'
+     - '/home/dinesh/Documents/zephyrproject/my_apps/spi_display/prj.conf'
+    user-files:
+     - '/home/dinesh/Documents/zephyrproject/my_apps/spi_display/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/dinesh/zephyr-sdk-0.17.4'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: '/home/dinesh/Documents/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/dinesh/Documents/zephyrproject/.venv/bin/west build -b longan_nano -p always'
+  topdir: '/home/dinesh/Documents/zephyrproject'
+  version: '1.5.0'
