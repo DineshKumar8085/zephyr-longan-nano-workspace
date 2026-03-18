@@ -36,6 +36,8 @@ static const struct device *uart_dev;
 
 static int lcd_enabled = 1;
 
+static int sample_rate = 800;
+
 /* ================= UART ISR ================= */
 void uart_cb(const struct device *dev, void *user_data)
 {
@@ -86,6 +88,15 @@ void execute_command(const struct device *lcd)
     else if (strcmp(rx_buf, "LCD ON") == 0) {
         lcd_enabled = 1;
     }
+    else if (strncmp(rx_buf, "SET RATE", 8) == 0) {
+        int rate = atoi(rx_buf + 9);
+        sample_rate = rate;
+        printk("RATE SET TO %d ms\n", sample_rate);
+}
+    else if (strcmp(rx_buf, "HELP") == 0) {
+        printk("Commands:\n");
+        printk("GET ACCEL\nGET GYRO\nGET TEMP\nGET ALL\nLCD ON\nLCD OFF\n");
+}
     else {
         printk("ERR:UNKNOWN_CMD\n");
     }
@@ -192,6 +203,6 @@ int main(void)
     printk(PROMPT);
 }
 
-        k_sleep(K_MSEC(200));
+        k_sleep(K_MSEC(sample_rate));
     }
 }
