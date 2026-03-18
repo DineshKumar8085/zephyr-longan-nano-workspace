@@ -1,0 +1,5 @@
+west:
+  command: /home/dinesh/Documents/zephyrproject/.venv/bin/west build -b longan_nano
+    -p always
+  topdir: /home/dinesh/Documents/zephyrproject
+  version: 1.5.0

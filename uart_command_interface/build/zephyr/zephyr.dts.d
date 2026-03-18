@@ -1,0 +1,33 @@
+empty_file.o: \
+ /home/dinesh/Documents/zephyrproject/zephyr/misc/empty_file.c \
+ /home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano/longan_nano.dts \
+ /home/dinesh/Documents/zephyrproject/zephyr/dts/riscv/gd/gd32vf103Xb.dtsi \
+ /home/dinesh/Documents/zephyrproject/zephyr/dts/common/mem.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/dts/riscv/gd/gd32vf103.dtsi \
+ /home/dinesh/Documents/zephyrproject/zephyr/dts/common/freq.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_macro.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_internal.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_loops.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_listify.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_internal_is_eq.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/timer/nuclei-systimer.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/pwm/pwm.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/gd32vf103-clocks.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/gd32-clocks-common.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/gd32vf103.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/gd32-common.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano/longan_nano-pinctrl.dtsi \
+ /home/dinesh/Documents/zephyrproject/modules/hal/gigadevice/include/dt-bindings/pinctrl/gd32vf103c(b-8)xx-pinctrl.h \
+ /home/dinesh/Documents/zephyrproject/modules/hal/gigadevice/include/dt-bindings/pinctrl/gd32vf103xx-afio.h \
+ /home/dinesh/Documents/zephyrproject/modules/hal/gigadevice/include/dt-bindings/pinctrl/gd32-afio.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/boards/sipeed/longan_nano/longan_nano-common.dtsi \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
+ /home/dinesh/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/mipi_dbi/mipi_dbi.h \
+ /home/dinesh/Documents/zephyrproject/my_apps/uart_command_interface/longan_nano.overlay
