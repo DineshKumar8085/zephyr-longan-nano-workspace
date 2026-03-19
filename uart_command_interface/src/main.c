@@ -46,24 +46,39 @@ void uart_cb(const struct device *dev, void *user_data)
     while (uart_irq_update(dev) && uart_irq_rx_ready(dev)) {
         uart_fifo_read(dev, &c, 1);
 
-        /* ===== ECHO BACK ===== */
+        /* ===== HANDLE BACKSPACE ===== */
+        if (c == 0x08 || c == 0x7F) {   // Backspace or DEL
+
+            if (rx_pos > 0) {
+                rx_pos--;
+
+                /* Erase character from terminal */
+                uart_poll_out(dev, '\b');
+                uart_poll_out(dev, ' ');
+                uart_poll_out(dev, '\b');
+            }
+            continue;
+        }
+
+        /* ===== NORMAL ECHO ===== */
         uart_poll_out(dev, c);
 
         if (c == '\r' || c == '\n') {
+
             uart_poll_out(dev, '\r');
             uart_poll_out(dev, '\n');
 
             rx_buf[rx_pos] = '\0';
             cmd_ready = 1;
             rx_pos = 0;
-        } else {
+        } 
+        else {
             if (rx_pos < UART_BUF_SIZE - 1) {
                 rx_buf[rx_pos++] = c;
             }
         }
     }
 }
-
 /* ================= COMMAND HANDLER ================= */
 void execute_command(const struct device *lcd)
 {
