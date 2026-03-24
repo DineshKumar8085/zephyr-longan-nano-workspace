@@ -38,7 +38,7 @@
     "CONFIG_MAIN_STACK_SIZE",
     "y",
     "int",
-    "1024",
+    "4096",
     "assign",
     [
       "/home/dinesh/Documents/zephyrproject/my_apps/uart_command_interface/prj.conf",
